@@ -35,8 +35,7 @@ recipes.addShaped(<gregtech:meta_item_1:32703> * 2, [[null, <mekanism:controlcir
 recipes.addShaped(<gtadditions:ga_meta_item:32055> * 2, [[<mekanism:controlcircuit:1>, null], [null, <mekanism:controlcircuit:1>]]);
 recipes.addShaped(<gtadditions:ga_meta_item:32015> * 2, [[<mekanism:controlcircuit:1>], [<mekanism:controlcircuit:1>]]);
 recipes.addShaped(<gregtech:meta_item_1:32715> * 2, [[<ore:circuitBasic>, null], [null, <mekanism:controlcircuit>]]);
-recipes.addShaped(<gregtech:meta_item_1:32701> * 2, [[<ore:circuitBasic>, null], [<ore:circuitBasic>, null]]);
-recipes.addShaped(<gtadditions:ga_meta_item:32017> * 2, [[<ore:circuitBasic>], [<ore:circuitBasic>]]);
+recipes.addShaped(<gtadditions:ga_meta_item:32017> * 2,[[<mekanism:controlcircuit>],[<mekanism:controlcircuit>]]);
 
 // Cinnabar convert
 recipes.addShapeless(<thermalfoundation:material>.withDamage(866), [<ore:gemCinnabar>]);
