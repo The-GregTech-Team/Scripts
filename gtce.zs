@@ -1,4 +1,5 @@
 import mods.gregtech.recipe.RecipeMap;
+import crafttweaker.oredict.IOreDictEntry;
 
 // Circuits
 var basic = <ore:circuitBasic>;
@@ -9,6 +10,32 @@ var ultimate = <ore:circuitUltimate>;
 // IE Stuff
 // IE Tube to GTCE tube
 <ore:circuitPrimitive>.addAll(<ore:electronTube>);
+<ore:ingotCupronickel>.addAll(<ore:ingotConstantan>);
+<ore:ingotCosmicNeutronium>.addAll(<ore:ingotNeutronium>);
+
+// CEU
+var wires = [237, 71, 18, 112, 1, 74, 302, 307, 308, 354] as int[];
+var circuits = [basic, basic, <ore:circuitGood>, advanced, <ore:circuitExtreme>, elite, <ore:circuitMaster>, ultimate, <ore:circuitSuperconductor>, <ore:circuitInfinite>] as IOreDictEntry[];
+var i = 0;
+var j = 0;
+for i in 0 to 10 {
+	var circuit = circuits[i];
+	var hull = <gregtech:machine>.withDamage(500 + i);
+	for j in 0 to 5 {
+		var wire = <gregtech:cable>.withDamage(j * 1000 + wires[i]);
+		var redAlloy = <gregtech:cable>.withDamage(j * 1000 + 237);
+		recipes.addShaped(<gregtech:machine>.withDamage(i * 8 + 10651 + j * 2),
+			[[wire, circuit, wire],
+			 [redAlloy, hull, redAlloy],
+			 [wire, <ore:chestWood>, wire]]
+		);
+		recipes.addShaped(<gregtech:machine>.withDamage(i * 8 + 10650 + j * 2),
+			[[wire, <ore:chestWood>, wire],
+			 [redAlloy, hull, redAlloy],
+			 [wire, circuit, wire]]
+		);
+	}
+}
 
 // Plastics
 var plastic = <ore:platePlastic>;
