@@ -1,0 +1,1 @@
+mods.mekanism.smelter.addRecipe(<gtadditions:ga_meta_item:32032>, <gregtech:meta_item_2:32016>);
